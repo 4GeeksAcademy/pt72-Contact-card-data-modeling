@@ -41,7 +41,6 @@ class Contact(Base):
     phone = Column(String(250))
 
     user_id = Column(Integer, ForeignKey('user.id'))
-    user = relationship(User)
 
     def to_dict(self):
         return {}
