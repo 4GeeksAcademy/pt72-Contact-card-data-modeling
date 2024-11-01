@@ -49,10 +49,8 @@ class Favorites(Base):
     __tablename__ = 'favorites'
     id = Column(Integer, primary_key=True)
     user_id = Column(Integer, ForeignKey('user.id'))
-    user = relationship(User)
-
     contact_id = Column(Integer, ForeignKey('contact.id'))
-    contact = relationship(Contact)
+
 
 
 ## Draw from SQLAlchemy base
